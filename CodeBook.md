@@ -1,9 +1,23 @@
 
 # CodeBook for run_analysis.R
 
-Preparation steps for downloading the data and assigning the data to variables are described in the README file included in this repository.
+Preparation steps for downloading the data are described in the README file included in this repository.
 
-run_analysis.R script loads the dplyr R package and executes steps 1-5 of the course project.
+run_analysis.R script contains 2 preparation steps and and executes steps 1-5 of the course project.
+
+## Preparation step I: Load dplyr R package
+Loads the dplyr R package by using the library() function
+
+## Preparation step II: Assign input data files to variables
+Assigns the input data files used in the R scripts to variables:
+* File: "UCI HAR Dataset/features.txt"; Assigned to variable: features; By using function: read.table
+* File: "UCI HAR Dataset/activity_labels.txt"; Assigned to variable: activities; By using function: read.table
+* File: "UCI HAR Dataset/test/subject_test.txt"; Assigned to variable: subject_test; By using function: read.table
+* File: "UCI HAR Dataset/test/X_test.txt"; Assigned to variable: x_test; By using function: read.table
+* File: "UCI HAR Dataset/test/y_test.txt"; Assigned to variable: y_test; By using function: read.table
+* File: "UCI HAR Dataset/train/subject_train.txt"; Assigned to variable: subject_train; By using function: read.table
+* File: "UCI HAR Dataset/train/X_train.txt"; Assigned to variable: x_train; By using function: read.table
+* File: "UCI HAR Dataset/train/y_train.txt"; Assigned to variable: y_train; By using function: read.table
 
 ## Step 1: Merges the training and the test sets to create one data set
 X (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function
